@@ -1,0 +1,9 @@
+# Client ignores
+node_modules/
+dist/
+.vite/
+.env
+.env.*
+*.log
+test-results/
+playwright-report/

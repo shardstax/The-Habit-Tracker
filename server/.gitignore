@@ -1,0 +1,8 @@
+# Server ignores
+node_modules/
+.env
+.env.*
+*.log
+server.run.log
+server.run.err.log
+coverage/
