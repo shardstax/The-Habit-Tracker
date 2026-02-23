@@ -7,12 +7,20 @@ require('dotenv').config();
 const seedFile = path.join(__dirname, 'seeds', 'seed.sql');
 
 async function run() {
+  const sslConfig = process.env.DB_SSL_CA
+    ? {
+        ca: process.env.DB_SSL_CA.replace(/\\n/g, '\n'),
+        rejectUnauthorized: process.env.DB_SSL_REJECT_UNAUTHORIZED !== 'false',
+      }
+    : undefined;
+
   const connection = await mysql.createConnection({
     host: process.env.DB_HOST || 'localhost',
     port: Number(process.env.DB_PORT || 3306),
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASSWORD || '',
     database: process.env.DB_NAME,
+    ssl: sslConfig,
     multipleStatements: true,
   });
 
