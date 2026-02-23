@@ -1,5 +1,7 @@
 # Personalized Goal-Driven Todo + Journal
 
+### BTW this Complete App is Vibe Coded by codex with me providing little to no help in code bugs. Just wanted to test the limit and I think I could say these models are exceptionally good
+
 ## Prerequisites
 
 - Node.js 20+ (tested on Node 24)
